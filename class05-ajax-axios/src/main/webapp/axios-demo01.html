@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>使用Axios发起Get方式请求</title>
+</head>
+<body>
+<h1>Axions 发起POST</h1>
+<script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
+<script>
+    axios({
+        method: 'get',
+        url: "http://localhost:8080/axiosServlet?username = zhangsan"
+    }).then(function (resp){
+        console.log(resp)
+        alert(resp.data)
+    }).catch(function (err){
+        console.log(err)
+    })
+</script>
+</body>
+</html>
